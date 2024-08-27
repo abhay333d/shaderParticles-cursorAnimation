@@ -83,8 +83,8 @@ displacement.canvas = document.createElement("canvas");
 displacement.canvas.width = 128;
 displacement.canvas.height = 128;
 displacement.canvas.style.position = "fixed";
-displacement.canvas.style.width = "256px";
-displacement.canvas.style.height = "256px";
+displacement.canvas.style.width = "300px";
+displacement.canvas.style.height = "300px";
 displacement.canvas.style.top = 0;
 displacement.canvas.style.left = 0;
 displacement.canvas.style.zIndex = 10;
@@ -129,7 +129,9 @@ displacement.texture = new THREE.CanvasTexture(displacement.canvas);
 /**
  * Particles
  */
-const particlesGeometry = new THREE.PlaneGeometry(10, 10, 200, 200);
+const particlesGeometry = new THREE.PlaneGeometry(10, 10, 256, 256);
+particlesGeometry.setIndex(null);
+particlesGeometry.deleteAttribute("normal");
 
 const intensitiesArray = new Float32Array(
   particlesGeometry.attributes.position.count
