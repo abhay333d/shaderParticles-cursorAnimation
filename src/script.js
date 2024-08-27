@@ -88,7 +88,7 @@ displacement.canvas.style.height = "300px";
 displacement.canvas.style.top = 0;
 displacement.canvas.style.left = 0;
 displacement.canvas.style.zIndex = 10;
-document.body.append(displacement.canvas); //To remove the tracker comment this line
+// document.body.append(displacement.canvas); //To remove the tracker comment this line
 
 //Context
 displacement.context = displacement.canvas.getContext("2d");
