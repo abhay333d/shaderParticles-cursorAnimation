@@ -1,5 +1,5 @@
 import * as THREE from "three";
-// import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import particlesVertexShader from "./shaders/particles/vertex.glsl";
 import particlesFragmentShader from "./shaders/particles/fragment.glsl";
 
@@ -58,9 +58,9 @@ const camera = new THREE.PerspectiveCamera(
 camera.position.set(0, 0, 18);
 scene.add(camera);
 
-// Controls
-// const controls = new OrbitControls(camera, canvas);
-// controls.enableDamping = true;
+Controls
+const controls = new OrbitControls(camera, canvas);
+controls.enableDamping = true;
 
 /**
  * Renderer
@@ -175,7 +175,7 @@ scene.add(particles);
  */
 const tick = () => {
   // Update controls
-  // controls.update();
+  controls.update();
 
   /**
    * Raycaster
